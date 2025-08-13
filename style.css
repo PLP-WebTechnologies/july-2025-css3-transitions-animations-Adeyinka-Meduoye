@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Part 1: Button hover effect using transition */
+.animate-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.3s ease;
+}
+
+.animate-btn:hover {
+  background-color: tomato;
+  transform: scale(1.1);
+}
+
+/* Part 3: Box for JS-triggered animation */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: steelblue;
+  margin: 20px 0;
+  transition: transform 1s ease, background-color 1s ease;
+}
+
+.box.animate {
+  transform: translateX(200px) rotate(45deg);
+  background-color: orange;
+}
+
+/* Keyframes example (optional for continuous animation) */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.animate-btn.pulse {
+  animation: pulse 1s infinite;
+}
